@@ -1,0 +1,240 @@
+/* General Reset and Box-Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-container {
+    display: grid;
+    grid-template-areas: 
+        "sidebar header header header"
+        "sidebar content content content"
+        "sidebar content content content"
+        "sidebar content content content";
+    grid-template-columns: minmax(100px, 250px) 1fr; 
+    grid-template-rows: auto 1fr; 
+    height: 100vh; 
+    /* gap: 10px;  */
+    /* padding: 10px; */
+}
+
+.header {
+    grid-area: header;
+    background-color: #fcfcfc;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#bell {
+    width: 20px;
+}
+.header-bottom, .header-top, .header-top-right{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.user-info {
+    display: flex;
+    gap: 20px
+}
+.user-text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+#hi-text {
+    font-size: 12px;
+}
+img#search {
+    width: 20px;
+}
+
+img#cat {
+    width: 50px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #41b7ee;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap:40px
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 8px
+}
+
+.logo {
+    width: 50px;
+    color: white;
+}
+
+.logo-text {
+    font-size: 26px;
+}
+
+#sidenav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between navigation items */
+}
+
+#sidenav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+
+.main-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* grid-template-rows: auto 1fr; */
+    /* grid-template-areas: 
+        "projects-header sidebar-header"
+        "projects-content sidebar-content"; */
+    gap: 20px;
+    padding: 20px;
+    /* height: 100vh; */
+    /* box-sizing: border-box; */
+}
+
+.projects, .announcement-section, .trending-section {
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    gap: 20px;
+    
+    
+}
+
+/* .projects h3, .right-sidebar h3 {
+    margin-bottom: 0;
+} */
+
+.right-sidebar {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    /* height: 90%; */
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    height: 100%;
+}
+
+.project-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card p {
+    flex: 1;
+}
+
+.project-actions {
+    display: flex;
+    justify-content: right;
+    margin-top: 10px;
+}
+
+
+
+.announcements, .trending {
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    height: 100%;
+}
+
+.announcement {
+    /* margin: 0; */
+    padding: 10px 0;
+}
+
+.announcement:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+    /* margin-top: 10px; */
+    /* padding: 0px 0px 20px 0px; */
+    
+}
+
+.announcement h4, .trending ul li {
+    margin: 0 0 5px;
+}
+
+/* .announcement p, .trending ul li {
+    margin: 0;
+} */
+
+.search-bar input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 400px;
+    background-color: #ddebf1;
+}
+
+.trending img {
+    width:40px
+}
+
+.header-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 16px;
+    background-color: #41b7ee;
+    color: white;
+    cursor: pointer;
+}
+
+.trending ul {
+    list-style: none;
+}
+
+.trending ul li {
+    display: flex;
+    align-items: space-evenly;
+    gap: 10px;
+}
+
+.trending ul li img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
